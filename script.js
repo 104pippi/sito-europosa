@@ -87,7 +87,7 @@
   if ('IntersectionObserver' in window && !calmo) {
     const io = new IntersectionObserver(voci => voci.forEach(v => {
       if (v.isIntersecting) { v.target.classList.add('in'); io.unobserve(v.target); }
-    }), { threshold: .12, rootMargin: '0px 0px -6% 0px' });
+    }), { threshold: 0, rootMargin: '0px 0px 4% 0px' });
     rv.forEach(el => io.observe(el));
   } else rv.forEach(el => el.classList.add('in'));
 
